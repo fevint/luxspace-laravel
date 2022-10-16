@@ -21,9 +21,9 @@ Route::get('/cart', [FrontendController::class, 'cart'])->name('cart');
 Route::get('/checkout/success', [FrontendController::class, 'success'])->name('checkout-success');
 
 Route::middleware(['auth:sanctum', 'verified'])->name('dashboard.')->prefix('dashboard')->group(function () {
-    Route::get('/',DashboardController::class,'index')->name('index');
+    Route::get('/', [DashboardController::class, 'index'])->name('index');
 
-    Route::middleware(['admin'])->group(function(){
+    Route::middleware(['admin'])->group(function () {
         //
     });
 });
