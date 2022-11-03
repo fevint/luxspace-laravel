@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\UserRequest;
 use App\Models\User;
-use Illuminate\Http\Request;
+;
 use Yajra\DataTables\Facades\DataTables;
 
 class UserController extends Controller
@@ -56,7 +56,7 @@ class UserController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(UserRequest $request)
     {
         //
     }
@@ -95,7 +95,7 @@ class UserController extends Controller
     public function update(UserRequest $request, User $user)
     {
         $data = $request->all();
-
+        
         $user->update($data);
 
         return redirect()->route('dashboard.user.index');
