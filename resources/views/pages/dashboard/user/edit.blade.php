@@ -24,9 +24,9 @@
                         </div>
                     </div>
                 @endif
-                <form class="w-full" action="{{ route('dashboard.user.update', $item->id) }}" method="post" enctype="multipart/form-data">
+                <form class="w-full" action="{{ route('dashboard.user.update', $item->id) }}" method="POST" enctype="multipart/form-data">
                     @csrf
-                    @method('put')
+                    @method('PUT')
                     <div class="flex flex-wrap -mx-3 mb-6">
                         <div class="w-full px-3">
                             <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-last-name">
